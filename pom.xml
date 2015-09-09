@@ -26,6 +26,10 @@
     <build>
         <plugins>
             <plugin>
+				<configuration>
+					<testResultsTimestamp>false</testResultsTimestamp>
+				</configuration>
+					
                 <groupId>com.lazerycode.jmeter</groupId>
 				<artifactId>jmeter-maven-plugin</artifactId>
 				<version>1.10.1</version>

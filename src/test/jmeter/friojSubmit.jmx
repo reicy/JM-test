@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1441824297000</longProp>
+        <longProp name="ThreadGroup.end_time">1441824297000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="home page" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">25.157.102.121</stringProp>
+            <stringProp name="HTTPSampler.port">8081</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/frioj/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="login page" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">25.157.102.121</stringProp>
+            <stringProp name="HTTPSampler.port">8081</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/frioj/login</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://25.157.102.121:8081/frioj/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="login" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="login" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">login</stringProp>
+                  <stringProp name="Argument.value">admin</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="pass" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">pass</stringProp>
+                  <stringProp name="Argument.value">frioj123</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">25.157.102.121</stringProp>
+            <stringProp name="HTTPSampler.port">8081</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/frioj/j_spring_security_check</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://25.157.102.121:8081/frioj/login</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="submit page" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">25.157.102.121</stringProp>
+            <stringProp name="HTTPSampler.port">8081</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/frioj/submit</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://25.157.102.121:8081/frioj/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="send solutions" enabled="true"/>
+          <hashTree>
+            <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="send solutions " enabled="true">
+              <boolProp name="LoopController.continue_forever">true</boolProp>
+              <stringProp name="TestPlan.comments">expected to be added to queue</stringProp>
+              <stringProp name="LoopController.loops">7</stringProp>
+            </LoopController>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="submit solution" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="problemId" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.name">problemId</stringProp>
+                      <stringProp name="Argument.value">1</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="lang" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.name">lang</stringProp>
+                      <stringProp name="Argument.value">Java</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="code" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.name">code</stringProp>
+                      <stringProp name="Argument.value">%2F*%0D%0A+*+ACM+ICPC+-+CERC+2011%0D%0A+*%0D%0A+*+Sample+solution%3A+Boring+Card+Game+%28cards%29%0D%0A+*+Author%3A+Martin+Kacer%0D%0A+*%2F%0D%0A%0D%0Aimport+java.io.BufferedReader%3B%0D%0Aimport+java.io.InputStreamReader%3B%0D%0Aimport+java.math.BigInteger%3B%0D%0Aimport+java.util.StringTokenizer%3B%0D%0A%0D%0Apublic+class+cards+%7B%0D%0A%09StringTokenizer+st+%3D+new+StringTokenizer%28%22%22%29%3B%0D%0A%09BufferedReader+input+%3D+new+BufferedReader%28new+InputStreamReader%28System.in%29%29%3B%0D%0A%09public+static+void+main%28String%5B%5D+args%29+throws+Exception+%7B%0D%0A%09%09cards+instance+%3D+new+cards%28%29%3B%0D%0A%09%09while+%28instance.run%28%29%29+%7B%2F*repeat*%2F%7D%0D%0A%09%7D%0D%0A%09String+nextToken%28%29+throws+Exception+%7B%0D%0A%09%09while+%28%21st.hasMoreTokens%28%29%29+st+%3D+new+StringTokenizer%28input.readLine%28%29%29%3B%0D%0A%09%09return+st.nextToken%28%29%3B%0D%0A%09%7D%0D%0A%09int+nextInt%28%29+throws+Exception+%7B%0D%0A%09%09return+Integer.parseInt%28nextToken%28%29%29%3B%0D%0A%09%7D%0D%0A%0D%0A%09static+final+int+MAXN+%3D+1000%3B%0D%0A%0D%0A%09static+int+perm5cnt+%3D+0%3B%0D%0A%09static+final+int%5B%5D%5B%5D+perm5+%3D+new+int%5B120%5D%5B5%5D%3B%0D%0A%09static+%7B%0D%0A%09%09int%5B%5D+res+%3D+new+int%5B5%5D%3B%0D%0A%09%09genperm5%28res%2C+0%2C+0%29%3B%0D%0A%09%7D%0D%0A%09static+void+genperm5%28int+res%5B%5D%2C+int+idx%2C+int+used%29+%7B%0D%0A%09%09if+%28idx+%3D%3D+5%29+%7B+System.arraycopy%28res%2C+0%2C+perm5%5Bperm5cnt%2B%2B%5D%2C+0%2C+5%29%3B+return%3B+%7D%0D%0A%09%09for+%28int+i+%3D+0%3B+i+%3C+5%3B+%2B%2Bi%29+if+%28%28used+%26+%281%3C%3Ci%29%29+%3D%3D+0%29+%7B%0D%0A%09%09%09res%5Bidx%5D+%3D+i%3B%0D%0A%09%09%09genperm5%28res%2C+idx%2B1%2C+used+%7C+%281%3C%3Ci%29%29%3B%0D%0A%09%09%7D%0D%0A%09%7D%0D%0A%09%0D%0A%09int%5B%5D+shufflePerm+%3D+new+int%5B5*MAXN%5D%3B++%2F*+the+permutation+repeated+by+shuffling+*%2F%0D%0A%09int%5B%5D+period+%3D+new+int%5B5%5D%3B++%2F*+period+length+of+individual+cards+*%2F%0D%0A%09int%5B%5D%5B%5D+presence%3B++%2F*+when+is+the+card+at+some+position+*%2F%0D%0A%09%0D%0A%09void+genPerm%28int+n%29+%7B%0D%0A%09%09for+%28int+i+%3D+0%3B+i+%3C+n%3B+%2B%2Bi%29+%7B%0D%0A%09%09%09shufflePerm%5B2*i%5D+%3D+i*5%3B%0D%0A%09%09%09shufflePerm%5B2*i%2B1%5D+%3D+i*5%2B1%3B%0D%0A%09%09%09shufflePerm%5B2*n+%2B+2*i%5D+%3D+i*5%2B2%3B%0D%0A%09%09%09shufflePerm%5B2*n+%2B+2*i%2B1%5D+%3D+i*5%2B3%3B%0D%0A%09%09%09shufflePerm%5B4*n+%2B+i%5D+%3D+i*5%2B4%3B%0D%0A%09%09%7D%0D%0A%09%7D%0D%0A%0D%0A%09%2F**+Extended+euclidean+algorithm.%0D%0A%09+*+%40return+ret%5B0%5D+%3D+gcd%28p1%2Cp2%29+%3D+p1+*+ret%5B1%5D+%2B+p2+*+ret%5B2%5D%0D%0A%09+*%2F%0D%0A%09BigInteger%5B%5D+euclidean%28BigInteger+p1%2C+BigInteger+p2%29+%7B%0D%0A%09%09if+%28p1.compareTo%28p2%29+%3C+0%29+%7B%0D%0A%09%09%09BigInteger%5B%5D+res+%3D+euclidean%28p2%2C+p1%29%3B%0D%0A%09%09%09BigInteger+x+%3D+res%5B1%5D%3B+res%5B1%5D+%3D+res%5B2%5D%3B+res%5B2%5D+%3D+x%3B%0D%0A%09%09%09return+res%3B%0D%0A%09%09%7D%0D%0A%09%09BigInteger+x2+%3D+BigInteger.ONE%2C+x1+%3D+BigInteger.ZERO%2C+y2+%3D+BigInteger.ZERO%2C+y1+%3D+BigInteger.ONE%3B%0D%0A%09%09while+%28p2.signum%28%29+%3E+0%29+%7B%0D%0A%09%09%09BigInteger+q%5B%5D+%3D+p1.divideAndRemainder%28p2%29%3B%0D%0A%09%09%09BigInteger+x0+%3D+x2.subtract%28x1.multiply%28q%5B0%5D%29%29%3B%0D%0A%09%09%09BigInteger+y0+%3D+y2.subtract%28y1.multiply%28q%5B0%5D%29%29%3B%0D%0A%09%09%09x2+%3D+x1%3B+x1+%3D+x0%3B+y2+%3D+y1%3B+y1+%3D+y0%3B+p1+%3D+p2%3B+p2+%3D+q%5B1%5D%3B%0D%0A%09%09%7D%0D%0A%09%09return+new+BigInteger%5B%5D%7Bp1%2C+x2%2C+y2%7D%3B%0D%0A%09%7D%0D%0A%09%0D%0A%09void+trackCard%28int+num%2C+int+pos%29+%7B%0D%0A%09%09int+step+%3D+0%2C+p+%3D+pos%3B%0D%0A%09%09do+%7B%0D%0A%09%09%09presence%5Bnum%5D%5Bp%5D+%3D+%2B%2Bstep%3B%0D%0A%09%09%09p+%3D+shufflePerm%5Bp%5D%3B%0D%0A%09%09%7D+while+%28p+%21%3D+pos%29%3B%0D%0A%09%09period%5Bnum%5D+%3D+step%3B%0D%0A%09%7D%0D%0A%09%0D%0A%09BigInteger+testCombination%28int%5B%5D+cardpos%29+%7B%0D%0A%09%09for+%28int+i+%3D+0%3B+i+%3C+5%3B+%2B%2Bi%29+if+%28presence%5Bi%5D%5Bcardpos%5Bi%5D%5D+%3D%3D+0%29+return+null%3B%0D%0A%09%09BigInteger+p1+%3D+BigInteger.valueOf%28period%5B0%5D%29%3B%0D%0A%09%09BigInteger+s1+%3D+BigInteger.valueOf%28presence%5B0%5D%5Bcardpos%5B0%5D%5D+-+1%29%3B%0D%0A%09%09for+%28int+i+%3D+1%3B+i+%3C+5%3B+%2B%2Bi%29+%7B%0D%0A%09%09%09BigInteger+p2+%3D+BigInteger.valueOf%28period%5Bi%5D%29%3B%0D%0A%09%09%09BigInteger+s2+%3D+BigInteger.valueOf%28presence%5Bi%5D%5Bcardpos%5Bi%5D%5D+-+1%29%3B%0D%0A%09%09%09BigInteger%5B%5D+ee+%3D+euclidean%28p1%2C+p2%29%3B%0D%0A%09%09%09BigInteger+d+%3D+s2.subtract%28s1%29%3B%0D%0A%09%09%09BigInteger%5B%5D+dq+%3D+d.divideAndRemainder%28ee%5B0%5D%29%3B%0D%0A%09%09%09if+%28dq%5B1%5D.signum%28%29+%21%3D+0%29+return+null%3B%0D%0A%09%09%09s1+%3D+p1.multiply%28ee%5B1%5D%29.multiply%28dq%5B0%5D%29.add%28s1%29%3B%0D%0A%09%09%09p1+%3D+p1.divide%28ee%5B0%5D%29.multiply%28p2%29%3B%0D%0A%09%09%09s1+%3D+s1.mod%28p1%29%3B%0D%0A%09%09%7D%0D%0A%09%09return+%28s1.signum%28%29+%3D%3D+0%29+%3F+p1+%3A+s1%3B%0D%0A%09%7D%0D%0A%0D%0A%09int+posOfCard%5B%5D+%3D+new+int%5B5%5D%3B%0D%0A%09BigInteger+testPlayer%28int+pos%29+%7B%0D%0A%09%09BigInteger+best+%3D+null%3B%0D%0A%09%09for+%28int+i+%3D+0%3B+i+%3C+perm5.length%3B+%2B%2Bi%29+%7B%0D%0A%09%09%09for+%28int+j+%3D+0%3B+j+%3C+5%3B+%2B%2Bj%29+posOfCard%5Bj%5D+%3D+pos+%2B+perm5%5Bi%5D%5Bj%5D%3B%0D%0A%09%09%09BigInteger+c+%3D+testCombination%28posOfCard%29%3B%0D%0A%09%09%09if+%28c+%21%3D+null+%26%26+%28best+%3D%3D+null+%7C%7C+best.compareTo%28c%29+%3E+0%29%29%0D%0A%09%09%09%09best+%3D+c%3B%0D%0A%09%09%7D%0D%0A%09%09return+best%3B%0D%0A%09%7D%0D%0A%0D%0A%09boolean+run%28%29+throws+Exception+%7B%0D%0A%09%09int+n+%3D+nextInt%28%29%3B%0D%0A%09%09if+%28n+%3D%3D+0%29+return+false%3B%0D%0A%09%09genPerm%28n%29%3B%0D%0A%09%09presence+%3D+new+int%5B5%5D%5B5*n%5D%3B%0D%0A%09%09for+%28int+i+%3D+0%3B+i+%3C+5*n%3B+%2B%2Bi%29+%7B%0D%0A%09%09%09int+c+%3D+nextInt%28%29%3B%0D%0A%09%09%09if+%28c--+%3E+5%29+continue%3B%0D%0A%09%09%09trackCard%28c%2C+i%29%3B%0D%0A%09%09%7D%0D%0A%09%09int+winner+%3D+0%3B%0D%0A%09%09BigInteger+best+%3D+null%3B%0D%0A%09%09for+%28int+p+%3D+0%3B+p+%3C+n%3B+%2B%2Bp%29+%7B%0D%0A%09%09%09BigInteger+win+%3D+testPlayer%285*p%29%3B%0D%0A%09%09%09if+%28win+%21%3D+null+%26%26+%28best+%3D%3D+null+%7C%7C+best.compareTo%28win%29+%3E+0%29%29+%7B%0D%0A%09%09%09%09best+%3D+win%3B+winner+%3D+p%2B1%3B%0D%0A%09%09%09%7D%0D%0A%09%09%7D%0D%0A%09%09System.out.println%28%28best+%3D%3D+null%29+%3F+%22Neverending+game.%22%0D%0A%09%09%09%09%3A+%22Player+%22+%2B+winner+%2B+%22+wins+game+number+%22+%2B+best+%2B+%22.%22%29%3B%0D%0A%09%09return+true%3B%0D%0A%09%7D%0D%0A%7D%0D%0A</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">25.157.102.121</stringProp>
+                <stringProp name="HTTPSampler.port">8081</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol">http</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/frioj/submitProblem</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="Referer" elementType="Header">
+                      <stringProp name="Header.name">Referer</stringProp>
+                      <stringProp name="Header.value">http://25.157.102.121:8081/frioj/submit</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Language" elementType="Header">
+                      <stringProp name="Header.name">Accept-Language</stringProp>
+                      <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                    </elementProp>
+                    <elementProp name="Content-Type" elementType="Header">
+                      <stringProp name="Header.name">Content-Type</stringProp>
+                      <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Encoding" elementType="Header">
+                      <stringProp name="Header.name">Accept-Encoding</stringProp>
+                      <stringProp name="Header.value">gzip, deflate</stringProp>
+                    </elementProp>
+                    <elementProp name="User-Agent" elementType="Header">
+                      <stringProp name="Header.name">User-Agent</stringProp>
+                      <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept" elementType="Header">
+                      <stringProp name="Header.name">Accept</stringProp>
+                      <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+              </hashTree>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">10</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-2071798538"> submission successfully submitted</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="submit solution" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="problemId" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.name">problemId</stringProp>
+                      <stringProp name="Argument.value">1</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="lang" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.name">lang</stringProp>
+                      <stringProp name="Argument.value">Java</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                    <elementProp name="code" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.name">code</stringProp>
+                      <stringProp name="Argument.value">%2F*%0D%0A+*+ACM+ICPC+-+CERC+2011%0D%0A+*%0D%0A+*+Sample+solution%3A+Boring+Card+Game+%28cards%29%0D%0A+*+Author%3A+Martin+Kacer%0D%0A+*%2F%0D%0A%0D%0Aimport+java.io.BufferedReader%3B%0D%0Aimport+java.io.InputStreamReader%3B%0D%0Aimport+java.math.BigInteger%3B%0D%0Aimport+java.util.StringTokenizer%3B%0D%0A%0D%0Apublic+class+cards+%7B%0D%0A%09StringTokenizer+st+%3D+new+StringTokenizer%28%22%22%29%3B%0D%0A%09BufferedReader+input+%3D+new+BufferedReader%28new+InputStreamReader%28System.in%29%29%3B%0D%0A%09public+static+void+main%28String%5B%5D+args%29+throws+Exception+%7B%0D%0A%09%09cards+instance+%3D+new+cards%28%29%3B%0D%0A%09%09while+%28instance.run%28%29%29+%7B%2F*repeat*%2F%7D%0D%0A%09%7D%0D%0A%09String+nextToken%28%29+throws+Exception+%7B%0D%0A%09%09while+%28%21st.hasMoreTokens%28%29%29+st+%3D+new+StringTokenizer%28input.readLine%28%29%29%3B%0D%0A%09%09return+st.nextToken%28%29%3B%0D%0A%09%7D%0D%0A%09int+nextInt%28%29+throws+Exception+%7B%0D%0A%09%09return+Integer.parseInt%28nextToken%28%29%29%3B%0D%0A%09%7D%0D%0A%0D%0A%09static+final+int+MAXN+%3D+1000%3B%0D%0A%0D%0A%09static+int+perm5cnt+%3D+0%3B%0D%0A%09static+final+int%5B%5D%5B%5D+perm5+%3D+new+int%5B120%5D%5B5%5D%3B%0D%0A%09static+%7B%0D%0A%09%09int%5B%5D+res+%3D+new+int%5B5%5D%3B%0D%0A%09%09genperm5%28res%2C+0%2C+0%29%3B%0D%0A%09%7D%0D%0A%09static+void+genperm5%28int+res%5B%5D%2C+int+idx%2C+int+used%29+%7B%0D%0A%09%09if+%28idx+%3D%3D+5%29+%7B+System.arraycopy%28res%2C+0%2C+perm5%5Bperm5cnt%2B%2B%5D%2C+0%2C+5%29%3B+return%3B+%7D%0D%0A%09%09for+%28int+i+%3D+0%3B+i+%3C+5%3B+%2B%2Bi%29+if+%28%28used+%26+%281%3C%3Ci%29%29+%3D%3D+0%29+%7B%0D%0A%09%09%09res%5Bidx%5D+%3D+i%3B%0D%0A%09%09%09genperm5%28res%2C+idx%2B1%2C+used+%7C+%281%3C%3Ci%29%29%3B%0D%0A%09%09%7D%0D%0A%09%7D%0D%0A%09%0D%0A%09int%5B%5D+shufflePerm+%3D+new+int%5B5*MAXN%5D%3B++%2F*+the+permutation+repeated+by+shuffling+*%2F%0D%0A%09int%5B%5D+period+%3D+new+int%5B5%5D%3B++%2F*+period+length+of+individual+cards+*%2F%0D%0A%09int%5B%5D%5B%5D+presence%3B++%2F*+when+is+the+card+at+some+position+*%2F%0D%0A%09%0D%0A%09void+genPerm%28int+n%29+%7B%0D%0A%09%09for+%28int+i+%3D+0%3B+i+%3C+n%3B+%2B%2Bi%29+%7B%0D%0A%09%09%09shufflePerm%5B2*i%5D+%3D+i*5%3B%0D%0A%09%09%09shufflePerm%5B2*i%2B1%5D+%3D+i*5%2B1%3B%0D%0A%09%09%09shufflePerm%5B2*n+%2B+2*i%5D+%3D+i*5%2B2%3B%0D%0A%09%09%09shufflePerm%5B2*n+%2B+2*i%2B1%5D+%3D+i*5%2B3%3B%0D%0A%09%09%09shufflePerm%5B4*n+%2B+i%5D+%3D+i*5%2B4%3B%0D%0A%09%09%7D%0D%0A%09%7D%0D%0A%0D%0A%09%2F**+Extended+euclidean+algorithm.%0D%0A%09+*+%40return+ret%5B0%5D+%3D+gcd%28p1%2Cp2%29+%3D+p1+*+ret%5B1%5D+%2B+p2+*+ret%5B2%5D%0D%0A%09+*%2F%0D%0A%09BigInteger%5B%5D+euclidean%28BigInteger+p1%2C+BigInteger+p2%29+%7B%0D%0A%09%09if+%28p1.compareTo%28p2%29+%3C+0%29+%7B%0D%0A%09%09%09BigInteger%5B%5D+res+%3D+euclidean%28p2%2C+p1%29%3B%0D%0A%09%09%09BigInteger+x+%3D+res%5B1%5D%3B+res%5B1%5D+%3D+res%5B2%5D%3B+res%5B2%5D+%3D+x%3B%0D%0A%09%09%09return+res%3B%0D%0A%09%09%7D%0D%0A%09%09BigInteger+x2+%3D+BigInteger.ONE%2C+x1+%3D+BigInteger.ZERO%2C+y2+%3D+BigInteger.ZERO%2C+y1+%3D+BigInteger.ONE%3B%0D%0A%09%09while+%28p2.signum%28%29+%3E+0%29+%7B%0D%0A%09%09%09BigInteger+q%5B%5D+%3D+p1.divideAndRemainder%28p2%29%3B%0D%0A%09%09%09BigInteger+x0+%3D+x2.subtract%28x1.multiply%28q%5B0%5D%29%29%3B%0D%0A%09%09%09BigInteger+y0+%3D+y2.subtract%28y1.multiply%28q%5B0%5D%29%29%3B%0D%0A%09%09%09x2+%3D+x1%3B+x1+%3D+x0%3B+y2+%3D+y1%3B+y1+%3D+y0%3B+p1+%3D+p2%3B+p2+%3D+q%5B1%5D%3B%0D%0A%09%09%7D%0D%0A%09%09return+new+BigInteger%5B%5D%7Bp1%2C+x2%2C+y2%7D%3B%0D%0A%09%7D%0D%0A%09%0D%0A%09void+trackCard%28int+num%2C+int+pos%29+%7B%0D%0A%09%09int+step+%3D+0%2C+p+%3D+pos%3B%0D%0A%09%09do+%7B%0D%0A%09%09%09presence%5Bnum%5D%5Bp%5D+%3D+%2B%2Bstep%3B%0D%0A%09%09%09p+%3D+shufflePerm%5Bp%5D%3B%0D%0A%09%09%7D+while+%28p+%21%3D+pos%29%3B%0D%0A%09%09period%5Bnum%5D+%3D+step%3B%0D%0A%09%7D%0D%0A%09%0D%0A%09BigInteger+testCombination%28int%5B%5D+cardpos%29+%7B%0D%0A%09%09for+%28int+i+%3D+0%3B+i+%3C+5%3B+%2B%2Bi%29+if+%28presence%5Bi%5D%5Bcardpos%5Bi%5D%5D+%3D%3D+0%29+return+null%3B%0D%0A%09%09BigInteger+p1+%3D+BigInteger.valueOf%28period%5B0%5D%29%3B%0D%0A%09%09BigInteger+s1+%3D+BigInteger.valueOf%28presence%5B0%5D%5Bcardpos%5B0%5D%5D+-+1%29%3B%0D%0A%09%09for+%28int+i+%3D+1%3B+i+%3C+5%3B+%2B%2Bi%29+%7B%0D%0A%09%09%09BigInteger+p2+%3D+BigInteger.valueOf%28period%5Bi%5D%29%3B%0D%0A%09%09%09BigInteger+s2+%3D+BigInteger.valueOf%28presence%5Bi%5D%5Bcardpos%5Bi%5D%5D+-+1%29%3B%0D%0A%09%09%09BigInteger%5B%5D+ee+%3D+euclidean%28p1%2C+p2%29%3B%0D%0A%09%09%09BigInteger+d+%3D+s2.subtract%28s1%29%3B%0D%0A%09%09%09BigInteger%5B%5D+dq+%3D+d.divideAndRemainder%28ee%5B0%5D%29%3B%0D%0A%09%09%09if+%28dq%5B1%5D.signum%28%29+%21%3D+0%29+return+null%3B%0D%0A%09%09%09s1+%3D+p1.multiply%28ee%5B1%5D%29.multiply%28dq%5B0%5D%29.add%28s1%29%3B%0D%0A%09%09%09p1+%3D+p1.divide%28ee%5B0%5D%29.multiply%28p2%29%3B%0D%0A%09%09%09s1+%3D+s1.mod%28p1%29%3B%0D%0A%09%09%7D%0D%0A%09%09return+%28s1.signum%28%29+%3D%3D+0%29+%3F+p1+%3A+s1%3B%0D%0A%09%7D%0D%0A%0D%0A%09int+posOfCard%5B%5D+%3D+new+int%5B5%5D%3B%0D%0A%09BigInteger+testPlayer%28int+pos%29+%7B%0D%0A%09%09BigInteger+best+%3D+null%3B%0D%0A%09%09for+%28int+i+%3D+0%3B+i+%3C+perm5.length%3B+%2B%2Bi%29+%7B%0D%0A%09%09%09for+%28int+j+%3D+0%3B+j+%3C+5%3B+%2B%2Bj%29+posOfCard%5Bj%5D+%3D+pos+%2B+perm5%5Bi%5D%5Bj%5D%3B%0D%0A%09%09%09BigInteger+c+%3D+testCombination%28posOfCard%29%3B%0D%0A%09%09%09if+%28c+%21%3D+null+%26%26+%28best+%3D%3D+null+%7C%7C+best.compareTo%28c%29+%3E+0%29%29%0D%0A%09%09%09%09best+%3D+c%3B%0D%0A%09%09%7D%0D%0A%09%09return+best%3B%0D%0A%09%7D%0D%0A%0D%0A%09boolean+run%28%29+throws+Exception+%7B%0D%0A%09%09int+n+%3D+nextInt%28%29%3B%0D%0A%09%09if+%28n+%3D%3D+0%29+return+false%3B%0D%0A%09%09genPerm%28n%29%3B%0D%0A%09%09presence+%3D+new+int%5B5%5D%5B5*n%5D%3B%0D%0A%09%09for+%28int+i+%3D+0%3B+i+%3C+5*n%3B+%2B%2Bi%29+%7B%0D%0A%09%09%09int+c+%3D+nextInt%28%29%3B%0D%0A%09%09%09if+%28c--+%3E+5%29+continue%3B%0D%0A%09%09%09trackCard%28c%2C+i%29%3B%0D%0A%09%09%7D%0D%0A%09%09int+winner+%3D+0%3B%0D%0A%09%09BigInteger+best+%3D+null%3B%0D%0A%09%09for+%28int+p+%3D+0%3B+p+%3C+n%3B+%2B%2Bp%29+%7B%0D%0A%09%09%09BigInteger+win+%3D+testPlayer%285*p%29%3B%0D%0A%09%09%09if+%28win+%21%3D+null+%26%26+%28best+%3D%3D+null+%7C%7C+best.compareTo%28win%29+%3E+0%29%29+%7B%0D%0A%09%09%09%09best+%3D+win%3B+winner+%3D+p%2B1%3B%0D%0A%09%09%09%7D%0D%0A%09%09%7D%0D%0A%09%09System.out.println%28%28best+%3D%3D+null%29+%3F+%22Neverending+game.%22%0D%0A%09%09%09%09%3A+%22Player+%22+%2B+winner+%2B+%22+wins+game+number+%22+%2B+best+%2B+%22.%22%29%3B%0D%0A%09%09return+true%3B%0D%0A%09%7D%0D%0A%7D%0D%0A</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                      <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">25.157.102.121</stringProp>
+                <stringProp name="HTTPSampler.port">8081</stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol">http</stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">/frioj/submitProblem</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                  <collectionProp name="Asserion.test_strings">
+                    <stringProp name="-599590156">server is busy, please submit later</stringProp>
+                  </collectionProp>
+                  <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                  <boolProp name="Assertion.assume_success">false</boolProp>
+                  <intProp name="Assertion.test_type">2</intProp>
+                </ResponseAssertion>
+                <hashTree/>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="Referer" elementType="Header">
+                      <stringProp name="Header.name">Referer</stringProp>
+                      <stringProp name="Header.value">http://25.157.102.121:8081/frioj/submit</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Language" elementType="Header">
+                      <stringProp name="Header.name">Accept-Language</stringProp>
+                      <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                    </elementProp>
+                    <elementProp name="Content-Type" elementType="Header">
+                      <stringProp name="Header.name">Content-Type</stringProp>
+                      <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept-Encoding" elementType="Header">
+                      <stringProp name="Header.name">Accept-Encoding</stringProp>
+                      <stringProp name="Header.value">gzip, deflate</stringProp>
+                    </elementProp>
+                    <elementProp name="User-Agent" elementType="Header">
+                      <stringProp name="Header.name">User-Agent</stringProp>
+                      <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0</stringProp>
+                    </elementProp>
+                    <elementProp name="Accept" elementType="Header">
+                      <stringProp name="Header.name">Accept</stringProp>
+                      <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+                <HTMLAssertion guiclass="HTMLAssertionGui" testclass="HTMLAssertion" testname="HTML Assertion" enabled="true">
+                  <longProp name="html_assertion_error_threshold">2</longProp>
+                  <longProp name="html_assertion_warning_threshold">10</longProp>
+                  <stringProp name="html_assertion_doctype">omit</stringProp>
+                  <boolProp name="html_assertion_errorsonly">false</boolProp>
+                  <longProp name="html_assertion_format">0</longProp>
+                  <stringProp name="html_assertion_filename">jTidy.txt</stringProp>
+                </HTMLAssertion>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="logout" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">25.157.102.121</stringProp>
+            <stringProp name="HTTPSampler.port">8081</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/frioj/logout</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://25.157.102.121:8081/frioj/submitProblem</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller1" enabled="true"/>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
